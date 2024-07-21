@@ -1,0 +1,56 @@
+#root {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 禁止文本选中 */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* 头部可以拖拽设置 */
+.nav {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+.button {
+  -webkit-app-region: no-drag;
+}
+
+/* 修改滚动条样式 */
+/* 设置滚动条宽度和背景颜色 */
+::-webkit-scrollbar {
+  width: 5px;
+  /* 水平滚动条的高度、垂直滚动条的宽度 */
+  height: 5px;
+  /* 水平滚动条的高度 */
+  background-color: rgba(255, 255, 255, 0);
+  /* 滚动条背景色 */
+}
+
+/* 设置滚动条滑块的样式 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* 滑块颜色 */
+  border-radius: 5px;
+  /* 滑块边框圆角 */
+}
+
+/* 设置滚动条的样式，当鼠标悬停时显示 */
+.lefts::-webkit-scrollbar {
+  width: 0px;
+  /* 悬停时滚动条背景色 */
+}
+
+/* 设置滚动条滑块的样式，当鼠标悬停时显示 */
+.lefth::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0);
+  /* 悬停时滑块颜色 */
+}
