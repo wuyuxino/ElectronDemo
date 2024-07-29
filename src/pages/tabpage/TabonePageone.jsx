@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import * as THREE from 'three';
+import { Spin } from 'antd';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { Sky } from 'three/addons/objects/Sky.js';
@@ -7,13 +8,15 @@ import { GUI } from 'three/addons/libs/lil-gui.module.min.js';
 
 
 export default function TabonePageone() {
+    let renderer;
+    const [percent, setPercent] = useState(0)
 
     function loadScene() {
         // 设置场景、相机和渲染器
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(75, (window.innerWidth - 230) / (window.innerHeight - 70), 0.1, 1000);
         camera.position.set(12, 8, 6);
-        const renderer = new THREE.WebGLRenderer();
+        renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth - 230, window.innerHeight - 70);
         let con = document.getElementsByClassName("scene")[0];
         con.appendChild(renderer.domElement);
@@ -106,7 +109,7 @@ export default function TabonePageone() {
             },
             (xhr) => {
                 // 加载过程中的回调函数
-                console.log((xhr.loaded / xhr.total * 100) + '% loaded');
+                setPercent((xhr.loaded / xhr.total * 100))
             },
             (error) => {
                 // 加载出错的回调函数
@@ -164,12 +167,20 @@ export default function TabonePageone() {
             if (guiDom) {
                 guiDom.parentNode.removeChild(guiDom);
             }
+            // 清理渲染器资源
+            if (renderer) {
+                renderer.dispose();
+            }
         }
     }, [])
 
     return (
         <div className="scene" style={{ display: 'flex' }}>
-
+            <div style={{ position: "absolute", top: "50%", left: "50%", display: percent == 100 ? "none" : "block", fontWeight: "800", color: "#FFF" }}>
+                <Spin tip={`加载中：${percent}%`} size="small">
+                    <div style={{ height: 60, width: 100 }}></div>
+                </Spin>
+            </div>
         </div>
     )
 }
