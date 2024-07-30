@@ -9,7 +9,10 @@ import {
 
     TabtwoPageone,
     TabtwoPagetwo,
-    TabtwoPagethree
+    TabtwoPagethree,
+
+    TabthreePageone,
+
 
 } from './pages/index';
 
@@ -25,7 +28,9 @@ export default function Router(){
 
                     <Route path="tabtwoPageone" element={<TabtwoPageone />} />
                     <Route path="tabtwoPagetwo" element={<TabtwoPagetwo />} />
-                    <Route path="tabtwoPagethree" element={<TabtwoPagethree />} />
+                    <Route path="tabtwoPagethree" element={<TabtwoPagethree />} /> 
+                    
+                    <Route path="tabthreePageone" element={<TabthreePageone />} /> 
                 </Route>
             </Routes>
         </BrowserRouter>

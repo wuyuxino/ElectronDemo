@@ -44,6 +44,16 @@ export default function Left() {
                     link: "/tabtwoPagethree"
                 }
             ]
+        },
+        {
+            key: 2,
+            nav: "Echarts",
+            list: [
+                {
+                    name: "地图加载",
+                    link: "/tabthreePageone"
+                }
+            ]
         }
     ]
 
