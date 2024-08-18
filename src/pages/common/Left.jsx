@@ -14,7 +14,7 @@ export default function Left() {
             nav: "ThreeJs",
             list: [
                 {
-                    name: "GLTF模型加载",
+                    name: "GLTF",
                     link: "/tabonePageone"
                 },
                 {
@@ -32,11 +32,11 @@ export default function Left() {
             nav: "BabylonJs",
             list: [
                 {
-                    name: "GLTF模型加载",
+                    name: "GLTF",
                     link: "/tabtwoPageone"
                 },
                 {
-                    name: "作品二",
+                    name: "BABYLON",
                     link: "/tabtwoPagetwo"
                 },
                 {

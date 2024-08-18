@@ -35,12 +35,12 @@ export default function TabonePageone() {
         const loaderTexture = new THREE.CubeTextureLoader();
         const texture = loaderTexture.setPath('/scene/gltf/textures/skybox/')
             .load([
-                'skybox.png', // right
-                'skybox.png', // left
-                'skybox.png', // top
-                'skybox.png', // bottom
-                'skybox.png', // back
-                'skybox.png'  // front
+                'TropicalSunnyDay_nx', // right
+                'TropicalSunnyDay_ny', // left
+                'TropicalSunnyDay_nz', // top
+                'TropicalSunnyDay_px', // bottom
+                'TropicalSunnyDay_py', // back
+                'TropicalSunnyDay_pz'  // front
             ]);
 
         // 设置场景的环境映射贴图
