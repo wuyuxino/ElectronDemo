@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter} from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 import {
     Home,
@@ -12,12 +12,15 @@ import {
     TabtwoPagethree,
 
     TabthreePageone,
+    TabthreePagetwo,
+    TabthreePagethree,
+    TabthreePagefour,
 
 
 } from './pages/index';
 
-export default function Router(){
-    return(
+export default function Router() {
+    return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />}>
@@ -28,9 +31,12 @@ export default function Router(){
 
                     <Route path="tabtwoPageone" element={<TabtwoPageone />} />
                     <Route path="tabtwoPagetwo" element={<TabtwoPagetwo />} />
-                    <Route path="tabtwoPagethree" element={<TabtwoPagethree />} /> 
-                    
-                    <Route path="tabthreePageone" element={<TabthreePageone />} /> 
+                    <Route path="tabtwoPagethree" element={<TabtwoPagethree />} />
+
+                    <Route path="tabthreePageone" element={<TabthreePageone />} />
+                    <Route path="tabthreePagetwo" element={<TabthreePagetwo />} />
+                    <Route path="tabthreePagethree" element={<TabthreePagethree />} />
+                    <Route path="tabthreePagefour" element={<TabthreePagefour />} />
                 </Route>
             </Routes>
         </BrowserRouter>

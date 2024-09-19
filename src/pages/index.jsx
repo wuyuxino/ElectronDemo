@@ -7,7 +7,10 @@ import TabtwoPageone from "./tabpage/TabtwoPageone";
 import TabtwoPagetwo from "./tabpage/TabtwoPagetwo";
 import TabtwoPagethree from "./tabpage/TabtwoPagethree";
 
-import TabthreePageone from "./tabpage/TabthreePageone"
+import TabthreePageone from "./tabpage/TabthreePageone";
+import TabthreePagetwo from "./tabpage/TabthreePagetwo";
+import TabthreePagethree from "./tabpage/TabthreePagethree";
+import TabthreePagefour from "./tabpage/TabthreePagefour";
 
 export {
     Home,
@@ -20,6 +23,9 @@ export {
     TabtwoPagetwo,
     TabtwoPagethree,
 
-    TabthreePageone
+    TabthreePageone,
+    TabthreePagetwo,
+    TabthreePagethree,
+    TabthreePagefour,
 
 }

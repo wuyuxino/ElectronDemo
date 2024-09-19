@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 export default function Left() {
     const navigate = useNavigate();
     const [tabIndex, setTabIndex] = useState("");
     const [itemIndex, setItemIndex] = useState("");
 
-    
 
     const menuList = [
         {
@@ -52,13 +51,45 @@ export default function Left() {
                 {
                     name: "地图加载",
                     link: "/tabthreePageone"
+                },
+                {
+                    name: "SVG",
+                    link: "/tabthreePagetwo"
+                },
+                {
+                    name: "散点图变形动画",
+                    link: "/tabthreePagethree"
+                },
+                {
+                    name: "公交线路图",
+                    link: "/tabthreePagefour"
                 }
             ]
         }
     ]
 
+
+    const { pathname } = useLocation();
+
+
     useEffect(() => {
-        
+        for (let i = 0; i < menuList.length; i++) {
+            for (let j = 0; j < menuList[i].list.length; j++) {
+                if (menuList[i].list[j]["link"] == pathname) {
+                    setTabIndex(i);
+                    setItemIndex(j);
+                    return;
+                }
+            }
+        }
+    }, [pathname])
+
+    useEffect(() => {
+
+        console.log(pathname)
+
+
+
         let leftMenu = document.getElementsByClassName("left")[0]
         leftMenu.addEventListener("mouseenter", () => {
             leftMenu.setAttribute("class", "left")
@@ -93,8 +124,6 @@ export default function Left() {
                                     return (
                                         <div
                                             onClick={() => {
-                                                setItemIndex(nn);
-                                                setTabIndex(i.key);
                                                 navigate(ii.link);
                                             }}
                                             key={ii.name}
