@@ -4,10 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="./public/Cesium/Widgets/widgets.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Note Book</title>
-  <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=3.0&ak=mflD4T1QI0t10NvC1FwD6A5dli19joMj"></script>
-
+  <script type="text/javascript"
+    src="https://api.map.baidu.com/getscript?v=3.0&ak=mflD4T1QI0t10NvC1FwD6A5dli19joMj"></script>
+  <script src="./public/Cesium/Cesium.js"></script>
 </head>
 
 <body>
@@ -16,3 +18,6 @@
 </body>
 
 </html>
+<script>
+  Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3YTAyMDE5MS00MzZhLTRlNmQtODRhNS05ZjI0MGNkZjQwM2IiLCJpZCI6NjM1MzksImlhdCI6MTcyNjgwMDMwOX0.kRjqPR9oO-t12FFhmMStdRtMggtgXL2iIa53igO2JFw";
+</script>

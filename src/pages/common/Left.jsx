@@ -65,6 +65,20 @@ export default function Left() {
                     link: "/tabthreePagefour"
                 }
             ]
+        },
+        {
+            key: 3,
+            nav: "Cesium",
+            list: [
+                {
+                    name: "Hello World",
+                    link: "/tabfourPageone"
+                },
+                {
+                    name: "GLTF",
+                    link: "/tabfourPagetwo"
+                }
+            ]
         }
     ]
 

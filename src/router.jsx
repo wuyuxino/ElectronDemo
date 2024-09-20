@@ -16,6 +16,10 @@ import {
     TabthreePagethree,
     TabthreePagefour,
 
+    TabfourPageone,
+    TabfourPagetwo,
+
+
 
 } from './pages/index';
 
@@ -37,6 +41,9 @@ export default function Router() {
                     <Route path="tabthreePagetwo" element={<TabthreePagetwo />} />
                     <Route path="tabthreePagethree" element={<TabthreePagethree />} />
                     <Route path="tabthreePagefour" element={<TabthreePagefour />} />
+
+                    <Route path="tabfourPageone" element={<TabfourPageone />} />
+                    <Route path="tabfourPagetwo" element={<TabfourPagetwo />} />
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -12,6 +12,10 @@ import TabthreePagetwo from "./tabpage/TabthreePagetwo";
 import TabthreePagethree from "./tabpage/TabthreePagethree";
 import TabthreePagefour from "./tabpage/TabthreePagefour";
 
+
+import TabfourPageone from "./tabpage/TabfourPageone";
+import TabfourPagetwo from "./tabpage/TabfourPagetwo";
+
 export {
     Home,
 
@@ -27,5 +31,8 @@ export {
     TabthreePagetwo,
     TabthreePagethree,
     TabthreePagefour,
+
+    TabfourPageone,
+    TabfourPagetwo,
 
 }
