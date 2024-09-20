@@ -6,6 +6,7 @@ export default function Echarts3() {
     const chartRef = useRef(null);
 
     var option, myChart;
+    var timer
 
     function DrawCanvas() {
         myChart = echarts.init(document.getElementById('echarts3'));
@@ -143,7 +144,7 @@ export default function Echarts3() {
         ];
         let optionIndex = 0;
         option = options[optionIndex];
-        setInterval(function () {
+        timer = setInterval(function () {
             optionIndex = (optionIndex + 1) % options.length;
             myChart.setOption(options[optionIndex]);
         }, 700);
@@ -160,6 +161,7 @@ export default function Echarts3() {
         DrawCanvas();
         window.addEventListener('resize', resizeChart);
         return () => {
+            clearInterval(timer);
             myChart.dispose();
             window.removeEventListener('resize', resizeChart);
         };
