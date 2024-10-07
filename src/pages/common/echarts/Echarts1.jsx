@@ -14,8 +14,8 @@ export default function Echarts1() {
         // 基于准备好的dom，初始化echarts实例
         myChart = echarts.init(document.getElementById('echarts1'));
 
-        var name_title = "中国人民大学2024年各省市计划录取人数"
-        var subname = '数据爬取自千栀网\n，\n上海、浙江无文理科录取人数'
+        var name_title = ""
+        var subname = ''
         var nameColor = " rgb(55, 75, 113)"
         var name_fontFamily = '等线'
         var subname_fontSize = 15
