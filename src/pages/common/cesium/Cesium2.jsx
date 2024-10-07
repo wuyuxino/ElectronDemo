@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 
 export default function Cesium2() {
 
+    // 官房参考链接---》https://sandcastle.cesium.com/?src=3D%20Models.html
+
     var viewer
 
     async function drawCesium() {
